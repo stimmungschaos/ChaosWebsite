@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch Bot Commands</title>
+    <style>
+        body {
+            background-color: #1e1e2f;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff4081;
+            margin-bottom: 20px;
+        }
+
+        .commands-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .command {
+            background-color: #292940;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .command:hover {
+            transform: scale(1.05);
+        }
+
+        .command-title {
+            font-size: 1.5em;
+            color: #ffa726;
+            margin-bottom: 10px;
+        }
+
+        .command-description {
+            font-size: 1.1em;
+            color: #b0bec5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Twitch Bot Commands</h1>
+    <div class="commands-container">
+        <div class="command">
+            <div class="command-title">!hello</div>
+            <div class="command-description">Begrüßt den Zuschauer mit einer persönlichen Nachricht.</div>
+        </div>
+        <div class="command">
+            <div class="command-title">!uptime</div>
+            <div class="command-description">Zeigt an, wie lange der Stream schon läuft.</div>
+        </div>
+        <div class="command">
+            <div class="command-title">!discord</div>
+            <div class="command-description">Gibt den Link zu deinem Discord-Server aus.</div>
+        </div>
+        <div class="command">
+            <div class="command-title">!followage</div>
+            <div class="command-description">Zeigt an, wie lange ein Nutzer dir schon folgt.</div>
+        </div>
+        <div class="command">
+            <div class="command-title">!lurk</div>
+            <div class="command-description">Ermöglicht es dem Zuschauer, in den Lurk-Modus zu wechseln.</div>
+        </div>
+    </div>
+</body>
+</html>
