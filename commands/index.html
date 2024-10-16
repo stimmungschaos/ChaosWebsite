@@ -7,13 +7,15 @@
     <style>
         /* Grundlegendes Styling */
         body {
-            background-color: #1a1a2e; /* Dunkles Lila als Hintergrundfarbe */
+            background: linear-gradient(135deg, #1a1a2e, #3a3a68); /* Lila Farbverlauf */
+            background-size: 400% 400%; /* Für die Animation */
             color: #ffffff;
             font-family: 'Arial', sans-serif;
             text-align: center;
             margin: 0;
             padding: 20px;
             overflow-x: hidden;
+            animation: gradient-animation 10s ease infinite; /* Animation für den Hintergrund */
         }
 
         h1 {
@@ -21,7 +23,7 @@
             margin-bottom: 30px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            animation: color-change 5s infinite; /* Animation für Farbwechsel */
+            animation: color-change 5s infinite;
         }
 
         .commands-container {
@@ -60,19 +62,6 @@
             z-index: 1;
         }
 
-        /* Hintergrundanimation für die Commands */
-        .command::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1), rgba(255,255,255,0) 70%);
-            animation: rotate 6s linear infinite;
-            z-index: 0;
-        }
-
         /* Farbwechsel-Animation für die Überschrift */
         @keyframes color-change {
             0% {
@@ -92,7 +81,20 @@
             }
         }
 
-        /* Animationen */
+        /* Animation für den Hintergrund */
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Animation für rotierenden Lichteffekt */
         @keyframes rotate {
             from {
                 transform: rotate(0deg);
