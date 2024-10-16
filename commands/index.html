@@ -18,11 +18,10 @@
 
         h1 {
             font-size: 3em;
-            color: #ff4b5c; /* Rot für den Titel */
             margin-bottom: 30px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            animation: glow 1.5s infinite alternate;
+            animation: color-change 5s infinite; /* Animation für Farbwechsel */
         }
 
         .commands-container {
@@ -74,16 +73,26 @@
             z-index: 0;
         }
 
-        /* Animationen */
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 10px #ff4b5c, 0 0 20px #ff4b5c, 0 0 30px #ff4b5c, 0 0 40px #ff4b5c;
+        /* Farbwechsel-Animation für die Überschrift */
+        @keyframes color-change {
+            0% {
+                color: #ff4b5c; /* Rot */
             }
-            to {
-                text-shadow: 0 0 20px #ff4b5c, 0 0 30px #ff4b5c, 0 0 40px #ff4b5c, 0 0 50px #ff4b5c;
+            25% {
+                color: #ffa500; /* Orange */
+            }
+            50% {
+                color: #add8e6; /* Hellblau */
+            }
+            75% {
+                color: #8e44ad; /* Lila */
+            }
+            100% {
+                color: #ff4b5c; /* Zurück zu Rot */
             }
         }
 
+        /* Animationen */
         @keyframes rotate {
             from {
                 transform: rotate(0deg);
